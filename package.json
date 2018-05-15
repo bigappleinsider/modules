@@ -2,13 +2,14 @@
   "name": "testapi",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "build/testapi.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/bigappleinsider/modules.git"
   },
   "scripts": {
-    "build": "webpack --progress --watch"
+    "dev": "webpack --progress --watch",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",

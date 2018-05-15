@@ -1,13 +1,18 @@
 const webpack = require('webpack');
 const nodeEnv = process.env.NODE_ENV || 'production';
 
+const path = require('path');
+
 module.exports = {
   devtool: 'source-map',
   entry: {
-    filename: './app.js'
+    filename: './src/user.js'
   },
   output: {
-    filename: 'build/bundle.js'
+    path: path.resolve(__dirname, './build'),
+    library: 'testapi',
+    libraryTarget: 'umd',
+    filename: 'testapi.js'
   },
   module: {
     loaders: [
